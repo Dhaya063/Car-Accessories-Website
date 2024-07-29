@@ -1,0 +1,48 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  padding-bottom: 50px; /* Space for footer */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px; /* Space for footer */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20232a;
+  padding: 10px 50px 10px 50px;
+}
+
+/* .logo {
+  flex: 1;
+} */
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 800;
+}
+
+.nav-links a:hover {
+  background-color: #ffa72c;
+  border-radius: 5px;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+}

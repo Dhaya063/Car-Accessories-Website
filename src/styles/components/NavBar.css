@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem 1rem 3rem;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+} 
+
+.navbar-brand .company-name {
+  margin-left: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #fff;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 1rem; /* Equal width and height for round shape */
+  height: 1rem;
+  padding: 0.25rem; /* Adjust if necessary */
+  border-radius: 50%;
+  background-color: red; /* Bright red background */
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

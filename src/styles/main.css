@@ -1,0 +1,20 @@
+/* src/styles/base.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    color: #000; /* Set default text color to black */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Ensure headers use the Roboto font */
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif; /* Ensure paragraphs use the Roboto font */
+  }
+  
+  button {
+    font-family: 'Roboto', sans-serif; /* Ensure buttons use the Roboto font */
+  }
+  

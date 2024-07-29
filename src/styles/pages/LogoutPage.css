@@ -1,0 +1,16 @@
+.logout-page {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-page .MuiButton-contained {
+  background-color: #ff5722; /* Button color */
+}
+
+.logout-page .MuiButton-contained:hover {
+  background-color: #e64a19; /* Button hover color */
+}

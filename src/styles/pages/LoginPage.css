@@ -1,0 +1,31 @@
+.login-page {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  padding: 3rem;
+}
+
+.login-page .MuiInputBase-input {
+  color: #fff; /* White input text */
+}
+
+.login-page .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* White border */
+}
+
+.login-page .MuiButton-contained {
+  background-color: #1e90ff; /* Primary button color */
+}
+
+.login-page .MuiButton-contained:hover {
+  background-color: #004080; /* Primary button hover color */
+}
+
+.login-page a {
+  color: #1e90ff; /* Link color */
+  text-decoration: none;
+}

@@ -1,0 +1,29 @@
+/* src/pages/ProductDetailPage.css */
+.product-detail {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .product-detail-image {
+    width: 300px;
+    height: auto;
+  }
+  
+  button {
+    background-color: #ff8527;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    font-weight: 800;
+  }
+  
+  button:hover {
+    background-color: #ff5500;
+  }
+  
