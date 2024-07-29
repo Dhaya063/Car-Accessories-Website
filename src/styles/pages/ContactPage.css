@@ -1,55 +1,51 @@
 .contact-page {
-  padding: 1rem;
-}
-
-.contact-form {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  height: 70vh;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  padding: 3rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
+.contact-page .MuiInputBase-input {
+  color: #fff; /* White input text */
 }
 
-label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  text-align: left;
-  font-size: 1.2rem;
+.contact-page .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* White border */
 }
 
-input,
-textarea {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="text"],
-input[type="email"] {
-  height: 2.5rem;
-}
-
-textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  background-color: #333;
+.contact-page .MuiButton-contained {
+  background-color: #d67900;
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #555;
+.contact-page .MuiButton-contained:hover {
+  background-color: #ff8e04;
+}
+
+.contact-page a {
+  color: #1e90ff; /* Link color */
+  text-decoration: none;
+}
+
+.contact-page .success-message {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-page .MuiAlert-root {
+  background-color: #4caf50; /* Green background for success */
+  color: #fff; /* White text */
+  margin-top: 20px;
 }

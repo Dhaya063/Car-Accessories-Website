@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { TextField, Button, Container, Typography } from '@mui/material';
 import '../styles/pages/ContactPage.css';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,62 +21,95 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., send data to a server)
-    console.log('Form data:', formData);
-    alert('Your message has been sent!');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    const { name, email, message } = formData;
+
+    // Validate fields
+    if (!name || !email || !message) {
+      setErrorMessage('All fields are required.');
+      setTimeout(() => setErrorMessage(''), 3000); // Clear error message after 3 seconds
+      return;
+    }
+
+    setSuccessMessage('Message sent successfully!');
+    setTimeout(() => setSuccessMessage(''), 3000); // Clear message after 3 seconds
+    setFormData({ name: '', email: '', message: '' }); // Clear form after submission
   };
 
   return (
-    <div className="contact-page">
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Send Message</button>
+    <Container className="contact-page" maxWidth="xs">
+      <Typography variant="h4" component="h1" gutterBottom>
+        Contact Us
+      </Typography>
+      <form onSubmit={handleSubmit}>
+        <TextField
+          fullWidth
+          label="Name"
+          variant="outlined"
+          margin="normal"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          sx={{
+            '& .MuiInputLabel-root': { color: 'white' },
+            '& .MuiOutlinedInput-root': {
+              color: 'white',
+              '& fieldset': { borderColor: 'white' },
+              '&:hover fieldset': { borderColor: 'white' },
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          label="Email"
+          type="email"
+          variant="outlined"
+          margin="normal"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          sx={{
+            '& .MuiInputLabel-root': { color: 'white' },
+            '& .MuiOutlinedInput-root': {
+              color: 'white',
+              '& fieldset': { borderColor: 'white' },
+              '&:hover fieldset': { borderColor: 'white' },
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          label="Message"
+          variant="outlined"
+          margin="normal"
+          multiline
+          rows={4}
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          sx={{
+            '& .MuiInputLabel-root': { color: 'white' },
+            '& .MuiOutlinedInput-root': {
+              color: 'white',
+              '& fieldset': { borderColor: 'white' },
+              '&:hover fieldset': { borderColor: 'white' },
+            },
+          }}
+        />
+        <Button type="submit" variant="contained" color="primary" fullWidth>
+          Send
+        </Button>
+        {successMessage && (
+          <Typography variant="body2" className="success-message">
+            {successMessage}
+          </Typography>
+        )}
+        {errorMessage && (
+          <Typography variant="body2" className="error-message">
+            {errorMessage}
+          </Typography>
+        )}
       </form>
-    </div>
+    </Container>
   );
 };
 

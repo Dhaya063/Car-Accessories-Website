@@ -1,12 +1,15 @@
 .register-page {
   background-color: #000; /* Black background */
   color: #fff; /* White text */
+  border-radius: 5%;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 3rem;
   padding: 3rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .register-page .MuiInputBase-input {
@@ -18,14 +21,32 @@
 }
 
 .register-page .MuiButton-contained {
-  background-color: #1e90ff; /* Primary button color */
+  background-color: #d67900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .register-page .MuiButton-contained:hover {
-  background-color: #004080; /* Primary button hover color */
+  background-color: #ff8e04;/* Button hover color */
 }
 
-.register-page a{
+.register-page a {
   color: #1e90ff; /* Link color */
   text-decoration: none;
+}
+
+.register-page .success-message {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.register-page .MuiAlert-root {
+  background-color: #4caf50; /* Green background for success */
+  color: #fff; /* White text */
+  margin-top: 20px;
 }

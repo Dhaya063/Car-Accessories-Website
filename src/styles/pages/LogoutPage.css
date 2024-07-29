@@ -8,9 +8,15 @@
 }
 
 .logout-page .MuiButton-contained {
-  background-color: #ff5722; /* Button color */
+  background-color: #d67900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .logout-page .MuiButton-contained:hover {
-  background-color: #e64a19; /* Button hover color */
+  background-color: #ff8e04;/* Button hover color */
 }

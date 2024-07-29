@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <div className="logo">
       <img src={logo} alt="Company Logo" className="logo-image" />
-      <span className="company-name">Car Accessories</span>
+      <span className="company-name">Car Transformers</span>
     </div>
   );
 };
