@@ -11,7 +11,7 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px; /* Space for footer */
+  padding-bottom: 20px; /* Space for footer */
 }
 
 .navbar {
