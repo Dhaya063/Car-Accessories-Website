@@ -31,7 +31,7 @@ const ContactPage = () => {
     }
 
     setSuccessMessage('Message sent successfully!');
-    setTimeout(() => setSuccessMessage(''), 3000); // Clear message after 3 seconds
+    setTimeout(() => setSuccessMessage(''), 10000); // Clear message after 3 seconds
     setFormData({ name: '', email: '', message: '' }); // Clear form after submission
   };
 
@@ -95,11 +95,12 @@ const ContactPage = () => {
             },
           }}
         />
-        <Button type="submit" variant="contained" color="primary" fullWidth>
+        <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '10px' }}>
           Send
         </Button>
         {successMessage && (
           <Typography variant="body2" className="success-message">
+            <i className="fas fa-check-circle" style={{ marginRight: '8px' }}></i>
             {successMessage}
           </Typography>
         )}

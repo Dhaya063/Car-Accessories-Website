@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Link, Alert } from '@mui/material';
+import { TextField, Button, Container, Typography, Link} from '@mui/material';
 import '../styles/pages/RegisterPage.css';
 
 const RegisterPage = () => {
@@ -25,9 +25,10 @@ const RegisterPage = () => {
       </Typography>
       {registrationSuccess ? (
         <div className="success-message">
-          <Alert severity="success" variant="filled">
-            Registration successful! <Link href="/login" style={{ color: 'black', fontWeight: 800, fontSize: 14, marginLeft: 5}}>Login</Link>
-          </Alert>
+          <div  className="success-part">
+              <i className="fas fa-check-circle" style={{ marginRight: '8px' }}></i>
+              Registration successful! <Link href="/login" className="login-link">Login</Link>
+          </div>
         </div>
       ) : (
         <form onSubmit={onSubmit}>
@@ -70,10 +71,18 @@ const RegisterPage = () => {
               style: { color: 'white' },
             }}
             InputProps={{
-              style: { color: 'white' },
-              notchedOutline: {
-                borderColor: 'white',
-              }
+              sx: {
+                color: 'white',
+                '& .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'white',
+                },
+                '&:hover .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'white',
+                },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'white',
+                },
+              },
             }}
           />
           <TextField
@@ -103,7 +112,7 @@ const RegisterPage = () => {
               },
             }}
           />
-          <Button type="submit" variant="contained" color="primary" fullWidth>
+          <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '10px' }}>
             Register
           </Button>
           <Typography variant="body2" align="center" style={{ marginTop: '10px' }}>

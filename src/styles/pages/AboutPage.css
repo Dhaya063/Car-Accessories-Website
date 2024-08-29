@@ -3,8 +3,8 @@
   background-color: black;
   font-family: 'Roboto', sans-serif;
   max-width: auto;
-  margin: 0 auto; 
-  padding: 0 100px 0 100px;
+  /* margin: 0 auto;  */
+  padding: 0 100px;
 }
 
 .about-page h2 {
@@ -22,17 +22,34 @@
   color: #ff8c00;
 }
 
+/* .about-page p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 60%;
+} */
+
 .about-page p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  text-align: justify;
+  text-align: center; /* Center text within p tag */
+  width: 100%; /* Make p tag take full width */
+  max-width: 800px; /* Set a max width for better readability */
+  margin-left: auto; /* Center align p tag horizontally */
+  margin-right: auto; /* Center align p tag horizontally */
 }
 
 .about-page ul {
   list-style-type: disc;
   padding-left: 200px;
   margin-bottom: 2rem;
+  text-align: center; /* Center text within p tag */
+  width: 100%; /* Make p tag take full width */
+  max-width: 70%; /* Set a max width for better readability */
+  margin-left: auto; /* Center align p tag horizontally */
+  margin-right: auto;
 }
 
 .about-page li {
@@ -41,6 +58,11 @@
   margin-bottom: 0.75rem;
   text-align: left;
  
+}
+
+.about-page li  span{
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .about-page .highlight {

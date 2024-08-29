@@ -83,7 +83,7 @@ const LoginPage = ({ handleLogin }) => {
         <Button type="submit" variant="contained" color="primary" fullWidth>
           Sign in
         </Button>
-        <Typography variant="body2" align="center" style={{ marginTop: '10px' }}>
+        <Typography variant="body2" align="center" style={{ marginTop: '20px' }}>
           Not a member? <Link href="/register" style={{ color: '#1e90ff' }}>Register</Link>
         </Typography>
         {/* <Typography variant="body2" align="center" style={{ marginTop: '10px' }}>

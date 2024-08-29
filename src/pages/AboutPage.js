@@ -21,9 +21,9 @@ const AboutPage = () => {
       </p>
       <h3>Our Values</h3>
       <ul>
-        <li>Quality: We only offer products that meet our high standards of quality.</li>
-        <li>Customer Service: Our team is here to help you with any questions or concerns.</li>
-        <li>Innovation: We continuously seek out the latest and greatest in car accessories.</li>
+        <li><span>Quality : </span> We only offer products that meet our high standards of quality.</li>
+        <li> <span>Customer Service : </span> Our team is here to help you with any questions or concerns.</li>
+        <li><span>Innovation : </span> We continuously seek out the latest and greatest in car accessories.</li>
       </ul>
       <h3>Contact Us</h3>
       <p className="centered">

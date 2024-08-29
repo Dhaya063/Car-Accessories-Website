@@ -2,7 +2,7 @@
   background-color: #000; /* Black background */
   color: #fff; /* White text */
   border-radius: 5%;
-  height: 70vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
 .register-page .MuiButton-contained {
   background-color: #d67900;
   color: white;
-  border: none;
+  border: none; 
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
@@ -39,14 +39,48 @@
   text-decoration: none;
 }
 
+
 .register-page .success-message {
   margin-top: 20px;
   text-align: center;
   width: 100%;
+  padding: 50px 0;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Add space between icon and text */
 }
 
-.register-page .MuiAlert-root {
+.register-page .success-part {
   background-color: #4caf50; /* Green background for success */
   color: #fff; /* White text */
-  margin-top: 20px;
+  padding: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Space between icon and text */
+  border-radius: 10px;
+  font-weight: 700;
 }
+
+.register-page .success-message .login-link {
+  color: #000000; /* Text color */
+  font-weight: 700; /* Bold text */
+  margin-left: 5px;
+  background-color: #fff; /* White background */
+  padding: 10px; /* Added horizontal padding for better spacing */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More subtle shadow */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allows padding and margin to work properly */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.register-page .success-message .login-link:hover {
+  background-color: #ffb300; /* Light gray background on hover */
+  color: #000000; /* Darker green text on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
